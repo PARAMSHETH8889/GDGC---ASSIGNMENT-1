@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 60px;
+    color: #FFD700;
+}
+/* Hover Effect for Latest Works Heading */
+.latest-works h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 36px;
+    padding-bottom: 5px;
+}
+
+.latest-works h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700; /* Golden color for the underline */
+    transition: width 0.3s ease;
+}
+
+.latest-works h2:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+/* Hover Effect for Navigation Links */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #FFD700; /* Golden underline */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Optional: change text color on hover */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.latest-works {
+    padding: 50px;
+    text-align: center;
+}
+
+.latest-works h2 {
+    font-size: 50px;
+}
+
+.latest-works p {
+    margin-bottom: 20px;
+}
+/* Styling the filter menu */
+.filter-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.filter-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #0c0c0c;
+    position: relative; /* Position relative for underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.filter-menu ul li a:hover {
+    color: #333333; /* Change text color on hover */
+}
+
+.filter-menu ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Positioning the underline below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #FFD700; /* Initial underline color */
+    transform: scaleX(0); /* Hide underline initially */
+    transform-origin: right;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.filter-menu ul li a:hover::after {
+    transform: scaleX(1); /* Show underline on hover */
+    transform-origin: left;
+}
+
+.filter-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.filter-menu ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFD700;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.medium {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.work-experiences {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+
+.work-experiences h2 {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.work-experiences h2::after {
+    content: "";
+    position: absolute;
+    width: 200px; /* Adjust the length of the underline */
+    height: 5px; /* Adjust the thickness of the underline */
+    background-color: #FFD700; /* Color of the underline */
+    left: 50%; /* Align to center */
+    bottom: 0; /* Place the underline at the bottom of the heading */
+    transform: translateX(-50%); /* Center the underline */
+}
+
+.experience-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+    
+}
+
+
+.experience-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    transition: transform 0.3s ease;
+    
+}
+.experience-item:hover {
+    transform: scale(1.1);
+}
+
+.hire-me {
+    background-color: #FFD700;
+    text-align: center;
+    padding: 60px;
+}
+
+.hire-me h2 {
+    font-size: 50px;
+    color: white;
+}
+.hire-me button {
+    background-color: white;
+    color: #FFD700;
+    padding: 15px 30px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transform transition */
+}
+
+.hire-me button:hover {
+    background-color: green;  /* Change to green on click */
+    color: white;             /* Change text color to white */
+    transform: scale(1.1);    /* Button grows to 110% of its size */
+}
+
+
+
+
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #fcfafa;
+}
+
+footer .footer-content {
+    margin-bottom: 20px;
+}
+
+footer .footer-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+footer .social-links img:hover {
+    transform: scale(1.1);
+}
